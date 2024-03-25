@@ -26,7 +26,7 @@ python3 fjern_tekst.py <input_file.docx> <output_file.docx>
 
 ### Beskrivelse
 
-`fleksibelt_sok_og_erstatt.py` er et mer avansert verktøy som lar brukeren spesifisere et søkemønster (som et regulært uttrykk) og en valgfri erstatningstekst. Dette skriptet kan manipulere tekst i både paragrafer og tabeller i et `.docx`-dokument.
+`fjern_eller_erstatt.py` er et mer avansert verktøy som lar brukeren spesifisere et søkemønster (som et regulært uttrykk) og en valgfri erstatningstekst. Dette skriptet kan manipulere tekst i både paragrafer og tabeller i et `.docx`-dokument.
 
 ### Bruk
 
@@ -39,7 +39,7 @@ pip install python-docx
 Bruk skriptet ved å følge denne syntaksen:
 
 ```bash
-python3 fleksibelt_sok_og_erstatt.py <input_file.docx> <output_file.docx> <soke_pattern> [--erstatt_med <erstatningstekst>]
+python3 fjern_eller_erstatt.py <input_file.docx> <output_file.docx> <soke_pattern> [--erstatt_med <erstatningstekst>]
 ```
 
 Hvis --erstatt_med ikke er spesifisert, vil teksten som matcher mønsteret bli fjernet fra dokumentet.
@@ -49,11 +49,11 @@ Eksempler
 For å fjerne tekst mellom "med" og "konsulenter":
 
 ```bash
-python3 fleksibelt_sok_og_erstatt.py dinfil.docx nyfil.docx "med \w{1,4} konsulenter"
+python3 fjern_eller_erstatt.py dinfil.docx nyfil.docx "med \w{1,4} konsulenter"
 ```
 
 For å erstatte tekst mellom "med" og "konsulenter" med "XYZ":
 
 ```bash
-python3 fleksibelt_sok_og_erstatt.py dinfil.docx nyfil.docx "med \w{1,4} konsulenter" --erstatt_med "XYZ"
+python3 fjern_eller_erstatt.py dinfil.docx nyfil.docx "med \w{1,4} konsulenter" --erstatt_med "XYZ"
 ```
